@@ -9,10 +9,10 @@ python virtualenv && python virtualenvwrapper
 
 Running
 -------
-    - `mkvirtualenv -python=$(which python3) django_basic`
-    - `pip install -r requirments.txt`
-    - `python manage.py migrate`
-    - `python manage.py runserver 0.0.0.0:8080`
+    - mkvirtualenv -python=$(which python3) django_basic
+    - pip install -r requirments.txt
+    - python manage.py migrate
+    - python manage.py runserver 0.0.0.0:8080
 
 
 
