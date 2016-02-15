@@ -1,0 +1,26 @@
+{% extends '_base.html' %}
+{% block title %} View Todos {% endblock title %}
+{% block content %} 
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Details</th>
+        <th>Completed</th>
+      </tr>
+    </thead>
+    {% for todo in todos %}
+      <tr>
+        <td>{{ todo.name }}</td>
+        <td>{{ todo.details }}</td>
+        <td>
+          {% if todo.completed %}
+            Yes
+          {% else %}
+            No
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock content %}
