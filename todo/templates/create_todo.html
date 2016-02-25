@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+{% block title %} Create Todo {% endblock title %}
+{% block content %} 
+  <form action="" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+      <fieldset>
+        {{ field.errors }}
+        {{ field.label_tag }} {{ field }}
+        {% if field.help_text %}
+          <p>{{ field.help_text|safe }}</p>
+        {% endif %}
+      </fieldset>
+    {% endfor %}
+    <button type="submit">Submit</button>
+  </form>
+{% endblock content %} 
+

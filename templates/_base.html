@@ -7,6 +7,11 @@
   {% endblock css %}
 </head>
 <body>
+  {% block navbar %}
+    <div>
+      <a href="/todo/all">View All</a>&nbsp;&nbsp;&nbsp;<a href="/todo/create/">Create Todo</a>
+    </div>
+  {% endblock navbar %}
   {% block content %}
   {% endblock content %}
   {% block scripts %}
