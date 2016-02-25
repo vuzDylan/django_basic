@@ -14,11 +14,18 @@
         <td>{{ todo.name }}</td>
         <td>{{ todo.details }}</td>
         <td>
-          {% if todo.completed %}
-            Yes
-          {% else %}
-            No
-          {% endif %}
+          <form action="/todo/toggle/{{ todo.id }}/" method="post">
+            {% csrf_token %}
+            {% if todo.completed %}
+              <button style="color: green" type="submit">
+                Yes
+              </button>
+            {% else %}
+              <button style="color: red" type="submit">
+                No
+              </button>
+            {% endif %}
+          </form>
         </td>
       </tr>
     {% endfor %}
